@@ -1,0 +1,265 @@
+header {
+	height: 100vh;
+}
+
+.header-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+	display: block;
+	mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
+}
+
+.header-video video {
+	object-fit: cover;
+	width: 100%;
+}
+
+menu {
+	display: flex;
+	justify-content: center;
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+header nav {
+	display: flex;
+}
+
+header nav ul {
+	display: flex;
+	column-gap: 25px;
+}
+
+header nav ul li {
+	display: flex;
+}
+
+header nav ul li a {
+	color: white;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	padding: 0 15px;
+	text-shadow: rgb(0, 0, 0) 1px 0 100px;
+}
+
+.triangleForNav {
+	position: absolute;
+	width: 3.5em;
+	height: 3.5em;
+	opacity: 0;
+	transition: opacity 0.8s ease;
+	/* Přechod opacity zmizeni */
+}
+
+.triangleForNav:hover {
+	opacity: 1;
+	;
+}
+
+.positionZ {
+	z-index: 2;
+}
+
+header .title {
+	color: white;
+	text-align: center;
+	margin-top: 200px;
+}
+
+header .title h2 {
+	color: white;
+	font-size: 120px;
+	font-weight: lighter;
+	text-shadow: #FC0 3px 0 40px;
+	border-bottom: 1px solid white;
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+header .title h2:hover {
+	text-shadow: rgb(68, 95, 250) 3px 0 40px;
+}
+
+header .title h3 {
+	margin-top: 10px;
+	font-size: 30px;
+}
+
+header .title .social {
+	margin-top: 15px;
+}
+
+header .title .social a {
+	color: rgb(144, 135, 143);
+	font-size: 40px;
+	margin: 0 10px;
+
+}
+
+header .title .social a:hover i.fa-facebook {
+	color: #1877F2;
+	text-shadow: #FC0 3px 0 40px;
+}
+
+header .title .social a:hover i.fa-instagram {
+	color: #E4405F;
+	text-shadow: #FC0 3px 0 40px;
+}
+
+header .title .social a:hover i.fa-youtube {
+	color: #CD201F;
+	text-shadow: #FC0 3px 0 40px;
+}
+
+header .title .social a:hover i.fa-spotify {
+	color: #1DB954;
+	text-shadow: #FC0 3px 0 40px;
+}
+
+header .title .social a:hover i.fa-apple {
+	color: #ffffff;
+	text-shadow: #FC0 3px 0 40px;
+}
+
+header .title .social a:hover i.fa-envelope {
+	color: #ff77ef;
+	text-shadow: #FC0 3px 0 40px;
+
+}
+
+/* pozicovani loga slunce+jeho napisu v hoveru */
+.logo {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.logo .sunTrans {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.arcade {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	bottom: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease;
+}
+
+@keyframes blink {
+
+	0%,
+	100% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+
+.logo:hover .arcade {
+	opacity: 1;
+	animation: blink 1.3s infinite;
+}
+
+.logo .arcade {
+	animation: none;
+	/* Zastaví animaci mimo hover */
+	transition: opacity 0.8s ease;
+	/* Zajistí plynulý přechod při odjezdu myši */
+}
+
+/* responzivita pro mobilni telefony */
+@media (max-width: 1220px) {
+
+	header {
+		height: 60vw;
+	}
+}
+
+@media (max-width: 1150px) {
+
+	header .title {
+		margin-top: 50px;
+	}
+
+	header .title {
+		font-size: 10vw;
+	}
+
+	header .title h2 {
+		font-size: 1em;
+	}
+
+
+	header .title h3 {
+		font-size: 0.4em;
+	}
+
+	header .title .social {
+		margin-top: 0.2em;
+	}
+
+	header .title .social a {
+		font-size: 0.5em;
+	}
+}
+
+@media (max-width: 1097px) {
+
+	header {
+		height: 0%;
+	}
+
+	header .container {
+		flex-direction: column;
+	}
+
+	header nav ul {
+		flex-direction: column;
+	}
+
+	header nav {
+		justify-content: center;
+	}
+
+	header nav ul li {
+		justify-content: center;
+	}
+
+	header nav ul li a {
+		padding: 10px 20px;
+	}
+
+	header a.logo {
+		display: flex;
+		justify-content: center;
+	}
+
+	header .title .social a {
+		font-size: 0.5em;
+	}
+
+	.logo:hover .arcade,
+	.triangleForNav:hover {
+		display: none;
+	}
+
+	.contactH1 {
+		font-size: 60px;
+	}
+}

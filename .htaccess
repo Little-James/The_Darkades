@@ -1,0 +1,12 @@
+#konfigurace apache, aby se nam obejvily freandly uzivatelske url (proto mam rozsireni VScodu Apache Conf)
+#zapneme modul pro prepisovani url
+RewriteEngine On
+
+# pokud prijde pozadavek na jakekoliv url co neexistuje
+# napr. /contact nebo /blabla, tak misto toho zmeni url
+# na index.php?page=TOCOJEVURL
+# takze napr. /contact se nam zmeni na index.php?page=contact
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.+) index.php?page=$1 [L,QSA]
+

@@ -1,0 +1,363 @@
+/* vse co bude v podslozkach na #sect se styluje v tomto css souboru */
+#sect {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	padding-bottom: 90px;
+	/* 	background: linear-gradient(0deg, #000000 0%, #052264 50%, #000000 75%); */
+}
+
+@media (max-width: 920px) {
+
+	#sect {
+		padding-bottom: 40px;
+	}
+}
+
+h1 {
+	text-align: center;
+	font-size: 80px;
+	margin: 0.5em 0;
+}
+
+#sect p {
+	font-size: 2rem;
+	text-align: center;
+	/* odsazeni mezi radky */
+	line-height: 120%;
+	/* odsazeni mezi odstavci */
+	margin: 0.5em 0;
+	/* 	odsazeni prvnich slov v odstavcích */
+	text-indent: 1em;
+}
+
+
+/* GALLERY */
+
+.boxcon {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-origin: center;
+	width: 1000px;
+	margin: 0 auto 2em auto;
+	padding: 1em 0.5em;
+	display: flex;
+	justify-content: center;
+}
+
+.indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 7px;
+	height: 7px;
+	background: #eb52ee;
+	border-radius: 100%;
+	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* .indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 500px;
+	background-image: url('/img/sun-trans.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 100%;
+	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+} */
+
+.galleryPhotos {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	overflow: hidden;
+}
+
+.gallery-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 1 20px;
+	margin: 8px 4.5px;
+	overflow: hidden;
+	transition: flex 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.gallery-item img {
+	width: 200px;
+	height: 402px;
+	object-fit: contain;
+	transform: scale(2);
+}
+
+#sect>.gallery {
+	display: flex;
+	justify-content: center;
+}
+
+
+#sect>.gallery .photos {
+	display: none;
+}
+
+@media (max-width: 1116px) {
+	#sect>.gallery .photos {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 28px;
+		justify-content: center;
+	}
+
+	.boxcon {
+		display: none;
+	}
+
+	#sect>.gallery {
+		display: block;
+	}
+}
+
+@media (max-width: 500px) {
+	#sect>.gallery h1 {
+		font-size: 2em;
+	}
+}
+
+
+/* CONTACT */
+
+#sect>.contact {
+	display: flex;
+	justify-content: center;
+}
+
+#sect>.contact .choises {
+	margin-top: 3em;
+	text-align: center;
+}
+
+#sect>.contact .choises a,
+#sect>.home a {
+	text-decoration: none;
+	color: white
+}
+
+#sect>.contact .choises a:hover {
+	text-shadow: rgb(255, 204, 0) 1px 0 25px;
+}
+
+#sect>.contact .form-table {
+	display: flex;
+	justify-content: center;
+	margin-top: 3em;
+}
+
+#sect>.contact form {
+	width: 40%;
+}
+
+@media (max-width: 920px) {
+	#sect>.contact form {
+		width: 70%;
+	}
+}
+
+/* dark mode google maps */
+#sect>.contact .map {
+	filter: grayscale(0%) invert(92%) contrast(100%);
+}
+
+/* line napozicujeme relativne a label absolutne */
+#sect>.contact .form-table .line {
+	position: relative;
+	margin-top: 0.3em;
+}
+
+#sect>.contact form label {
+	position: absolute;
+	top: 0.1em;
+	left: 10px;
+	color: #3e6edd;
+	font-size: 0.9em;
+	transition: all 0.2s ease;
+}
+
+#sect>.contact form .jointogether {
+	width: 100%;
+	font-size: 1em;
+	/* 	padding: 0.3em; */
+	padding-top: 0.7em;
+	border-radius: 5px;
+	font-family: "VT323", monospace;
+	font-weight: 400;
+	font-style: normal;
+	/* border: 3px solid #1b47ae; */
+}
+
+#sect>.contact form .jointogether:placeholder-shown {
+	padding-top: 0.3em;
+}
+
+
+#sect>.contact form .jointogether:placeholder-shown+label {
+	font-size: 1.3em;
+	color: rgb(213, 213, 213);
+}
+
+#sect>.contact form button {
+	border-radius: 5px;
+	padding: 0.3em 0.7em;
+	font-size: 1em;
+	font-family: "VT323", monospace;
+	font-weight: 400;
+	font-style: normal;
+	color: #3e6edd;
+}
+
+@media (max-width: 920px) {
+
+	.choises {
+		font-size: 4vw;
+	}
+
+	.contact p {
+		font-size: 4vw;
+	}
+
+}
+
+
+
+/* LIVE */
+
+.row-backround {
+	background-color: rgb(255, 204, 0, 0.1);
+}
+
+.different-color:hover {
+	color: rgb(255, 204, 0);
+}
+
+.table {
+	border-collapse: collapse;
+	border: none;
+	width: 100%;
+	margin-right: 10px;
+}
+
+.live table td {
+	padding: 10px;
+}
+
+.live table td a {
+	text-decoration: none;
+	color: white
+}
+
+@media (max-width: 776px) {
+	.table {
+		font-size: 4vw;
+	}
+}
+
+/* video */
+
+#sect>.video_page .video-container .noir-video {
+	display: flex;
+	justify-content: center;
+}
+
+#sect>.video_page .video-container .noir-video .videogallery {
+	border: 2px solid rgb(255, 255, 255);
+	box-shadow: 1px 1px 35px rgb(28, 96, 232);
+	margin-top: 17px;
+}
+
+.play-button {
+	position: absolute;
+	z-index: 2;
+	width: 116px;
+	height: 116px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px 20px;
+	cursor: pointer;
+	border: none;
+	border-radius: 100%;
+	opacity: 0;
+}
+
+.play-img {
+	z-index: 0;
+	position: absolute;
+	width: 200px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px 20px;
+	opacity: 0.2;
+}
+
+/* 404 - page not found */
+
+#sect>.page-not-found .error {
+	display: flex;
+	justify-content: center;
+	animation: fade 0.3s infinite alternate;
+}
+
+/* mizení a objevování se img erroru na strance 404 */
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@media (max-width: 920px) {
+	.live img {
+		display: none;
+	}
+}
+
+/* left player a right player */
+
+.leftplayer h1,
+.rightplayer h1 {
+	color: white;
+	text-shadow: #eb52ee 1px 0 25px;
+	animation: fade 0.5s infinite alternate;
+}
+
+/* mizení a objevování se h1 nadpisu */
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@media (max-width: 1176px) {
+
+	.leftplayer h1,
+	.rightplayer h1 {
+		font-size: 6vw;
+		margin: 2.5em;
+	}
+}
