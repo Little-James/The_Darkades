@@ -26,7 +26,7 @@ if (array_key_exists("page", $_GET)) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- 	v poli $pageList se zorientujeme podle vybrani $page a zeptame se na vlastnost title (titulke, co se objevi v paticce stranky vedle faviconu) -->
+	<!-- 	v pol $pageList se zorientujeme podle vybrani $page a zeptame se na vlastnost title (titulke, co se objevi v paticce stranky vedle faviconu) -->
 	<title><?php echo $pageList[$page]->title ?></title>
 
 	<link rel="icon" type="image/x-icon" href="img/favicon.png">
