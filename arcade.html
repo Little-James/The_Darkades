@@ -4,7 +4,7 @@
 <head>
 	<title>A R C A D E</title>
 	<meta charset="UTF-8">
-	<link rel="icon" type="image/x-icon" href="img/sun-trans.png">
+	<link rel="icon" type="image/x-icon" href="img/triangle-neon.png">
 	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 	<div class="audio">
 		<audio hidden controls autoplay>
@@ -49,7 +49,19 @@
 			body {
 				/* Přesměrování obsahu, nebo stylování stránky pro portrait mód */
 				transform: rotate(90deg);
-				width: 100%;
+				/* width: 192%;
+				right: -46%; */
+				overflow-x: hidden;
+				position: fixed;
+			}
+		}
+
+		@media screen and (max-width: 876px) and (orientation: portrait) {
+			body {
+				/* Přesměrování obsahu, nebo stylování stránky pro portrait mód */
+				transform: rotate(90deg);
+				width: 192%;
+				right: -46%;
 				overflow-x: hidden;
 				position: fixed;
 			}
@@ -59,7 +71,7 @@
 
 <body>
 
-	<div class="maintitle">T H E _ D A R K A D E S</div>
+	<!-- 	<div class="maintitle">T H E _ D A R K A D E S</div> -->
 
 	<canvas class="gameplace" width="1300" height="855" id="game"></canvas>
 
@@ -153,9 +165,9 @@
 				}
 
 				// Přesměrování na novou stránku, pokud některý hráč dosáhne 10 bodů
-				if (leftScore >= 10) {
+				if (leftScore >= 100) {
 					window.location.href = "leftplayer"; // Změňte na URL cílové stránky
-				} else if (rightScore >= 10) {
+				} else if (rightScore >= 100) {
 					window.location.href = "rightplayer"; // Změňte na URL cílové stránky
 				}
 
@@ -187,8 +199,8 @@
 			// Draw the scores
 			context.font = "150px VT323";
 			context.fillStyle = 'rgb(91, 92, 93, 0.7)';
-			context.fillText(leftScore, canvas.width / 2.5, 450);
-			context.fillText(rightScore, canvas.width * 2.2 / 4, 450);
+			context.fillText(leftScore, canvas.width / 2.8, 450);
+			context.fillText(rightScore, canvas.width * 2.35 / 4, 450);
 		}
 
 		document.addEventListener('keydown', function (e) {
