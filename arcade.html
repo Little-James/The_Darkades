@@ -12,11 +12,11 @@
 		</audio>
 	</div>
 
-	<div class="maintitle">T H E _ D A R K A D E S</div>
-
 	<style>
 		html,
 		body {
+			position: absolute;
+			width: 100%;
 			height: 100%;
 			margin: 0;
 		}
@@ -40,10 +40,21 @@
 			font-family: "VT323", monospace;
 			font-style: normal;
 		}
+
+		@media screen and (max-width: 1200px) and (orientation: portrait) {
+			body {
+				/* Přesměrování obsahu, nebo stylování stránky pro portrait mód */
+				transform: rotate(90deg);
+				width: 100%;
+				overflow-x: hidden;
+				position: fixed;
+			}
+		}
 	</style>
 </head>
 
 <body>
+	<div class="maintitle">T H E _ D A R K A D E S</div>
 
 	<canvas width="1300" height="855" id="game"></canvas>
 	<script>
@@ -136,9 +147,9 @@
 				}
 
 				// Přesměrování na novou stránku, pokud některý hráč dosáhne 10 bodů
-				if (leftScore >= 10) {
+				if (leftScore >= 100) {
 					window.location.href = "leftplayer"; // Změňte na URL cílové stránky
-				} else if (rightScore >= 10) {
+				} else if (rightScore >= 100) {
 					window.location.href = "rightplayer"; // Změňte na URL cílové stránky
 				}
 

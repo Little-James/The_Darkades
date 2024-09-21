@@ -275,6 +275,7 @@ h1 {
 }
 
 #sect>.video_page .video-container .noir-video .videogallery {
+	width: 94vw;
 	border: 2px solid rgb(255, 255, 255);
 	box-shadow: 1px 1px 35px rgb(28, 96, 232);
 	margin-top: 17px;
@@ -289,7 +290,6 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	padding: 10px 20px;
-	cursor: pointer;
 	border: none;
 	border-radius: 100%;
 	opacity: 0;
@@ -358,6 +358,6 @@ h1 {
 	.leftplayer h1,
 	.rightplayer h1 {
 		font-size: 6vw;
-		margin: 2.5em;
+		margin: 0.9em;
 	}
 }
