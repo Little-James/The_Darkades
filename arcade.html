@@ -41,6 +41,10 @@
 			font-style: normal;
 		}
 
+		.gameplace {
+			width: 77%;
+		}
+
 		@media screen and (max-width: 1200px) and (orientation: portrait) {
 			body {
 				/* Přesměrování obsahu, nebo stylování stránky pro portrait mód */
@@ -54,9 +58,11 @@
 </head>
 
 <body>
+
 	<div class="maintitle">T H E _ D A R K A D E S</div>
 
-	<canvas width="1300" height="855" id="game"></canvas>
+	<canvas class="gameplace" width="1300" height="855" id="game"></canvas>
+
 	<script>
 		const canvas = document.getElementById('game');
 		const context = canvas.getContext('2d');
@@ -147,9 +153,9 @@
 				}
 
 				// Přesměrování na novou stránku, pokud některý hráč dosáhne 10 bodů
-				if (leftScore >= 100) {
+				if (leftScore >= 10) {
 					window.location.href = "leftplayer"; // Změňte na URL cílové stránky
-				} else if (rightScore >= 100) {
+				} else if (rightScore >= 10) {
 					window.location.href = "rightplayer"; // Změňte na URL cílové stránky
 				}
 
